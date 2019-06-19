@@ -1,6 +1,7 @@
 package com.jzy.game.engine.mina.handler;
 
 import org.apache.mina.core.session.IoSession;
+import org.apache.mina.filter.FilterEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -67,6 +68,11 @@ public class ClientProtocolHandler extends DefaultProtocolHandler {
 		} catch (Exception e) {
 			log.error("messageReceived", e);
 		}
+	}
+
+	@Override
+	public void event(IoSession ioSession, FilterEvent filterEvent) throws Exception {
+
 	}
 
 	@Override
